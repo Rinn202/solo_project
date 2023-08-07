@@ -54,11 +54,15 @@ public class TodoController {
     return new ResponseEntity<>(todoResponseDto, HttpStatus.OK);
   }
   
+//  @GetMapping
+//  public ResponseEntity getTodos(){
+//    List<Todo> todo = todoService.findTodos();
+//    List<TodoResponseDto> todoResponseDto = mapper.todosToTodoResponseDto(todo);
+//    return new ResponseEntity<>(todoResponseDto, HttpStatus.OK);
+//  }
   @GetMapping
-  public ResponseEntity getTodos(){
-    List<Todo> todo = todoService.findTodos();
-    List<TodoResponseDto> todoResponseDto = mapper.todosToTodoResponseDto(todo);
-    return new ResponseEntity<>(todoResponseDto, HttpStatus.OK);
+  public String getTodos(){
+    return "To-do Application !";
   }
   
   @DeleteMapping("/{todo-id}")
